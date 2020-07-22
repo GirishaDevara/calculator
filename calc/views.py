@@ -15,6 +15,8 @@ def calc(request):
         operation = request.GET.get('operation')
     if operation == ' ':
         ans = value1 + value2
+    elif operation == '+':
+        ans = value1 + value2
     elif operation == '-':
         ans = value1 - value2
     elif operation == '*':
