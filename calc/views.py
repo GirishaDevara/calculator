@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 
 
+@csrf_exempt
 def calc(request):
     if request.method == 'POST':
         value1 = int(request.POST.get('value1'))
